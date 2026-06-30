@@ -3,7 +3,7 @@ from aiogram.filters import Command
 from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
 from ctypes import cast, POINTER
 from comtypes import CLSCTX_ALL
-from filters import IsAdmin
+from filter import IsAdmin
 
 router = Router()
 

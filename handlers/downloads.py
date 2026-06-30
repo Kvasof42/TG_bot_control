@@ -1,7 +1,7 @@
 import os
 from aiogram import Bot
 from aiogram import Router, types, F
-from filters import IsAdmin
+from filter import IsAdmin
 
 router = Router()
 
