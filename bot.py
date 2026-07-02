@@ -7,6 +7,7 @@ from dotenv import load_dotenv
 from filter import IsAdmin
 from service.volume import router as volume_router
 from handlers.downloads import router as downloads_router
+from handlers.screenshot import router as screenshot_router
 from aiogram.types import BotCommand
 
 load_dotenv()
@@ -16,6 +17,7 @@ bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
 dp.include_router(volume_router)
 dp.include_router(downloads_router)
+dp.include_router(screenshot_router)
 
 @dp.message(Command('start'), IsAdmin())
 async def start(message: types.Message):
